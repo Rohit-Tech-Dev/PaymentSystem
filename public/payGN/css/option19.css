@@ -1,0 +1,979 @@
+@font-face {
+    font-family: "Digital Numbers";
+    src: url("/skins/css/digital-7.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    background: #eee;
+    overflow: hidden auto;
+    /* height: 100vh; */
+}
+
+.gradientpay-wrapper {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.gradientpay-card {
+    max-width: 500px;
+    background: linear-gradient(180deg, #130b19 0%, #211125 100%);
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 100%;
+}
+
+.newgradient-part {
+    box-shadow: 0px 0px 7.5px rgb(0 0 0 / 16%);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 0.507;
+    background-size: 100% 100%;
+    max-width: 90%;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.newyellow-part img {
+    width: 100%;
+    /* min-width: 375px; */
+    min-height: 240px;
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+}
+
+.newgradient-ct {
+    width: 50%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+.newgradient-ct h4 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgb(0 0 0 / 70%);
+    width: 100%;
+    max-width: 117px;
+    min-height: 50px;
+}
+
+.yellow-payment {
+    font-weight: 600;
+    font-size: 11px;
+    min-height: 15px;
+    letter-spacing: 0.15em;
+    color: #904900;
+    background: radial-gradient(74.81% 74.7% at 36.92% 3.74%,
+            #fff200 0%,
+            #feed01 22%,
+            #fde006 46%,
+            #fcca0d 70%,
+            #faab18 96%,
+            #faa61a 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 150px;
+    border-style: none;
+    position: relative;
+}
+
+.progress {
+    background: linear-gradient(0.03deg, #8B4E69 0.03%, #481198 99.97%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 7.5px rgba(0, 0, 0, 0.16);
+    border-radius: 15px;
+    display: flex;
+    width: 100%;
+    max-width: 97px;
+    min-height: 15px;
+    padding: 1px;
+}
+
+.progress_inner {
+    flex: 1 1 100%;
+    border-radius: 15px;
+    background: linear-gradient(0.03deg, #371C39 0.03%, #150B1B 99.97%);
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.5px;
+}
+
+.progress-value {
+    border-radius: 100px;
+    background: linear-gradient(89.97deg, #BE55C5 0.58%, #62579B 100.08%);
+    width: 0;
+    opacity: 1;
+    position: relative;
+}
+
+.progress_text {
+    position: absolute;
+    left: -0.75px;
+    top: 0;
+    padding-top: 1px;
+    color: #fff;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.success .progress-value {
+    animation: load 2s normal forwards linear, hideout 0.25s normal forwards linear 2s;
+}
+
+.success .progress_text {
+    animation: sucess 0s normal forwards linear 2.1s;
+}
+
+@keyframes load {
+    0% {}
+
+    100% {
+        width: 100%;
+        content: 'Success';
+    }
+}
+
+@keyframes hideout {
+    0% {}
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sucess {
+    0% {}
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.gradrupees {
+    position: absolute;
+    left: 0;
+    /* bottom: -8px; */
+}
+
+.gradrupees img {
+    width: 100%;
+    min-width: 23px;
+    min-height: 23px;
+}
+
+.success-payment {
+    background: radial-gradient(74.81% 74.7% at 36.92% 3.74%,
+            #00ff0a 0%,
+            #00ff0a 22%,
+            #00ff0a 46%,
+            #00ff0a 70%,
+            #26b83d 96%,
+            #26b83d 100%);
+    font-weight: 600;
+    font-size: 11px;
+    min-height: 15px;
+    letter-spacing: 0.15em;
+    color: #363636;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 150px;
+    border-style: none;
+    position: relative;
+}
+
+.success-btn {
+    display: none;
+}
+
+.success-rupees {
+    position: absolute;
+    right: 38px;
+    bottom: -8px;
+}
+
+.success-rupees img {
+    width: 100%;
+    max-width: 23px;
+    min-height: 23px;
+}
+
+.newgradient-img {
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+
+.newgradient-img img {
+    width: 100%;
+    max-width: 215px;
+    height: 164px;
+    object-fit: contain;
+}
+
+.newgradient-choose h4 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-align: left;
+    padding-left: 35px;
+}
+
+.apps-bg {
+    margin: auto;
+    background: linear-gradient(0.03deg, #371c39 0.03%, #150b1b 99.97%);
+    box-shadow: 0px 0px 7.5px rgb(0 0 0 / 16%);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex: 1 1 100%;
+    border-radius: 20px;
+}
+
+.app__bg_wrpr:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #9b5574, #5e21b6);
+}
+
+.app__bg_wrpr {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    padding: 1px;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.gradrupee_scan_wrap:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 13.5%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #9b5574, #5e21b6);
+    max-width: 166px;
+    min-height: 170px;
+    border-radius: 20px;
+}
+
+.gradrupee_scan_wrap {
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    padding: 1px;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.newgradient-choose ul {
+    display: flex;
+    column-count: 4;
+    gap: 0px;
+    padding-left: 0px;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.newgradient-choose ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.newgradient-choose ul li a {
+    text-decoration: none;
+}
+
+.newgradient-choose ul li p {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.newgradient-choose ul li:nth-child(2) p,
+.newgradient-choose ul li:nth-child(4) p {
+    margin-top: 4px;
+}
+
+.gradientapp-img {
+    line-height: 1px;
+}
+
+.gradient-qrwrapper {
+    padding-top: 5px;
+}
+
+.gradient-qrwrapper h4 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.gradtimer-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.gradientqr-scan {
+    width: 50%;
+}
+
+.gradientqr-scan a p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 123%;
+    display: flex;
+    align-items: center;
+    color: #e4e4e4;
+    text-decoration: none;
+    max-width: 50px;
+    min-height: 12px;
+    margin: auto;
+    padding: 10px 0 10px 90px;
+}
+
+.gradientqr-scan a {
+    text-decoration: none;
+}
+
+.gradrupee-scan {
+    text-align: center;
+    /* background: linear-gradient(180deg, #9B5575 100%, #5E22B6 100%); */
+    box-shadow: inset 0px 0px 2.5px 3.5px rgba(29, 16, 34, 0.9);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 161px;
+    min-height: 150px;
+    margin-left: auto;
+    padding-top: 18px;
+    background: #d9d9d9;
+}
+
+.gradrupee-scan img {
+    width: 100%;
+    max-width: 125px;
+    min-height: 125px;
+    animation: beat .75s infinite alternate;
+}
+
+@keyframes beat {
+    100% {
+        transform: scale(0.925);
+    }
+}
+
+.gradrupee-scan a {
+    text-decoration: none;
+}
+
+.gradrupee-scan a p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #1b1300;
+    margin: 0px;
+}
+
+.newgradient-timer {
+    width: 50%;
+}
+
+.newgradient-timer h4 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 123%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    max-width: 127px;
+    width: 100%;
+    min-height: 36px;
+    text-align: left;
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.roundframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roundtime {
+    left: 80px;
+    top: 39px;
+    color: #be55c5;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 18px;
+    text-align: center;
+    width: 100%;
+    max-width: 53px;
+    font-family: "Digital Numbers";
+}
+
+.gradient_download_btn {
+    max-width: 150px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 30px;
+    margin: auto;
+}
+
+.roundframe img {
+    width: 100%;
+    max-width: 43px;
+    min-height: 49px;
+    margin-right: 18px;
+    object-fit: contain;
+}
+
+.grad-end-content {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+}
+
+.grad-end-content h4 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    color: #838383;
+    width: 100%;
+    max-width: 335px;
+    min-height: 25px;
+}
+
+.gradientcontinue-btn {
+    height: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    width: 327px;
+    max-width: 95%;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    aspect-ratio: 1 / 0.125;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    background: #be55c5;
+    box-shadow: 1.57163e-15px 25.6667px 51.3333px rgba(38, 17, 39, 0.674),
+        inset -9.22023e-16px -15.0578px 15.0578px #9a459f,
+        inset 9.22023e-16px 15.0578px 15.0578px #db62e3;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.gradmiddle-or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    isolation: isolate;
+    padding: 15px 0;
+    background-color: transparent;
+    margin: 0 20px;
+}
+
+.gradmiddle-or p {
+    margin: 0;
+    background: linear-gradient(180deg, #130b19 0%, #211125 100%);
+    padding: 0 21px;
+    color: #838383;
+    font-size: 12px;
+}
+
+.gradmiddle-or:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8b4e69;
+    z-index: -1;
+}
+
+/* image modal popup */
+#myImg {
+    /* border-radius: 5px; */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+.newqrscanmodal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.95);
+    /* Black w/ opacity */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content (image) */
+.qrmodal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    width: 100%;
+    max-width: 200px;
+    min-height: 200px;
+}
+
+.qrmodal-content.zoom {
+    width: 100%;
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.qrmodal__img * {
+    pointer-events: none;
+}
+
+/* @-webkit-keyframes zoom {
+    0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(3);
+      }
+      100% {
+        transform: scale(5);
+      }
+} */
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.new-time-left {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #096c0c;
+    width: 100%;
+    max-width: 53px;
+    min-height: 10px;
+}
+
+/* modal css starts here */
+.newgradientmodal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 0;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.newgradmodal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 470px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* The Close Button */
+.completeclose {
+    font-size: 14px;
+    font-weight: 400;
+    border-style: none;
+    background-color: #2f2a2b;
+    color: #fff;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #363636;
+    border-radius: 5px;
+}
+
+.completewait {
+    border-style: none;
+    width: 150px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #f9c34b;
+    color: #363636;
+    font-size: 14px;
+}
+
+.newgradientwait {
+    background: #be55c5;
+    color: #fff;
+}
+
+.completemodal-controls {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.newgradmodal-content p {
+    font-size: 13px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.complete-timer p {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.newgradmodal-timer p {
+    background: #be55c5;
+    color: #fff;
+}
+
+/* modal css ends here */
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    /* .qrmodal-content {
+width: 100%;
+} */
+}
+
+/* responsive starts here */
+@media (min-width: 1025px) {
+    .gradient-qrwrapper {
+        padding-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .newyellow-part img {
+        border-bottom-left-radius: 48px;
+        border-bottom-right-radius: 48px;
+    }
+
+    .gradient-qrwrapper {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gradientpay-wrapper {
+        display: block;
+        /* background-color: #F5F5F5; */
+        background: linear-gradient(180deg, #130b19 0%, #211125 100%);
+    }
+
+    .apps-bg {
+        margin: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 360px) {
+    .greentime {
+        left: 40px;
+    }
+
+    .timer-wrap {
+        padding: 0 10px;
+    }
+
+    .gradtimer-wrap {
+        padding: 0 10px;
+    }
+
+    .gradientapp-img img {
+        max-width: 50px;
+        min-height: 50px;
+    }
+
+    .newgradient-choose ul li:nth-child(2) .gradientapp-img img,
+    .newgradient-choose ul li:nth-child(4) .gradientapp-img img {
+        max-width: 56px;
+        min-height: 50px;
+    }
+}
+
+/* @media (max-width: 480px) {
+    .gradientqr-scan a p{
+        padding: 10px 0 10px 70px;
+    }
+} */
+
+@media (min-width: 360px) and (max-width: 480px) {
+    .newgradient-img {
+        top: 0%;
+    }
+
+    .gradientqr-scan a p {
+        padding: 10px 0 10px 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .greentime {
+        left: 22%;
+    }
+
+    .gradrupee-scan {
+        min-height: 155px;
+    }
+
+    .gradrupee-scan img {
+        max-width: 115px;
+        min-height: 115px;
+    }
+
+    .gradtimer-wrap {
+        padding: 0 10px;
+    }
+
+    .newgradient-part {
+        margin-top: 15px;
+    }
+
+    .gradientapp-img img {
+        max-width: 54px;
+    }
+
+    .newgradient-choose ul li:nth-child(2) .gradientapp-img img,
+    .newgradient-choose ul li:nth-child(4) .gradientapp-img img {
+        max-width: 61px;
+        min-height: 50px;
+    }
+
+    .newgradient-choose h4 {
+        padding-left: 20px;
+        font-size: 13px;
+    }
+
+    .gradrupee-scan {
+        min-height: 135px;
+    }
+
+    .gradientqr-scan a p {
+        padding: 10px 0 10px 15px;
+    }
+
+    .newgradient-img {
+        top: -9px;
+        left: 55%;
+    }
+
+    .newgradient-img img {
+        width: 80%;
+    }
+
+    .newgradient-ct {
+        top: 10%;
+    }
+
+    .newgradient-ct h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 280px) {
+    .success-payment {
+        width: 90%;
+    }
+
+    .success-rupees {
+        right: 7px;
+    }
+
+    .gradrupee-scan {
+        min-height: 120px;
+    }
+
+    .gradrupee-scan img {
+        max-width: 100px;
+        min-height: 100px;
+    }
+
+    .gradtimer-wrap {
+        padding: 0 10px;
+        align-items: flex-start;
+    }
+
+    .gradientapp-img img {
+        max-width: 45px;
+        min-height: 45px;
+    }
+
+    .newgradient-choose ul li:nth-child(2) .gradientapp-img img,
+    .newgradient-choose ul li:nth-child(4) .gradientapp-img img {
+        max-width: 53px;
+        min-height: 50px;
+    }
+
+    .gradientqr-scan a p {
+        padding: 10px 0 10px 10px;
+    }
+
+    .newgradient-timer {
+        margin-top: 8px;
+    }
+
+    .gradientcontinue-btn {
+        width: 250px;
+        max-width: 95%;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .newgradient-part {
+        margin-top: 15px;
+    }
+
+    .newgradient-choose h4 {
+        font-size: 13px;
+        padding-left: 10px;
+    }
+
+    .gradientqr-scan {
+        width: 45%;
+    }
+
+    .newgradient-timer {
+        width: 55%;
+    }
+
+    .newgradient-img {
+        top: -16px;
+        left: 52%;
+    }
+
+    .newgradient-ct {
+        top: 5%;
+    }
+
+    .completeclose {
+        margin: 0 5px;
+    }
+
+    .completewait {
+        margin: 0 5px;
+    }
+
+    .newgradient-ct h4 {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+    }
+
+    .newgradient-img img {
+        width: 90%;
+        max-width: 140px;
+        object-fit: contain;
+    }
+
+}
